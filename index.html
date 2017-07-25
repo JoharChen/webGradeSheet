@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生成绩查询系统</title>
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script type="text/javascript" src="indexCode.js"></script>
+    <link rel="stylesheet" type="text/css" href="./bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg">
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/js/bootstrap.js">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">学生成绩查询系统</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a class="active" href="#">系统简介</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        具体功能
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">添加信息</a></li>
+                        <li><a href="#">查询信息</a></li>
+                        <li><a href="#">修改信息</a></li>
+                        <li><a href="#">删除信息</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">注册</a></li>
+                <li><a href="#">登录</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="row">
+        <div class="container">
+            <input id="addInfoText" type="text" placeholder="输入格式例如：陈清泓,2015211107,汉族,1504,105,144,93,95" class="col-md-8">
+            <button id="addInfoButton" type="submit"><span class="glyphicon glyphicon-plus" onclick="addInfo()"></span></button>
+        </div>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>学号</th>
+            <th>民族</th>
+            <th>班级</th>
+            <th>语文</th>
+            <th>数学</th>
+            <th>英语</th>
+            <th>编程</th>
+            <th>平均分</th>
+            <th>总分</th>
+        </tr>
+        </thead>
+        <tbody id="addId">
+        </tbody>
+    </table>
+    <hr class="featurette-divider">
+
+
+    <div class="row container">
+            <input id="searchInfoText" type="text" placeholder="输入格式例如：2015211107,2015211007,.." class="col-md-8">
+            <button id="searchInfoButton" type="submit"><span class="glyphicon glyphicon-search" onclick="searchInfo()"></span></button>
+    </div>
+    <br/>
+
+
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>学号</th>
+        <th>民族</th>
+        <th>班级</th>
+        <th>语文</th>
+        <th>数学</th>
+        <th>英语</th>
+        <th>编程</th>
+        <th>平均分</th>
+        <th>总分</th>
+    </tr>
+    </thead>
+    <tbody id="searchId">
+    </tbody>
+</table>
+    <hr class="featurette-divider">
+
+</div>
+</body>
+</html>
